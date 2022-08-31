@@ -25,7 +25,8 @@ function getBorrowersForBook(book, accounts) {
   const copy = borrows.map(({ id, returned }) => {
     const account = accounts.find((account) => account.id === id);
     return {
-      ...account, returned,
+      ...account,
+      returned,
     };
   });
   return copy
